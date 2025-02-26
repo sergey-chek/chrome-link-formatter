@@ -2,7 +2,7 @@
 
 A lightweight Chrome extension that copies the current page’s title and URL in **Jira** or **Slack-friendly** markup. It automatically sanitizes special characters so your links don’t break the target format.
 
-![Chrome Link Formatter UI](resources/ui.jpg)
+![Chrome Link Formatter UI](resources/ui.png)
 
 ## Features
 

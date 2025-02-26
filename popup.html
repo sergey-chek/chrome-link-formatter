@@ -16,11 +16,20 @@
             font-size: 1rem;
             text-align: center;
         }
+        .description {
+            font-size: 0.75rem;
+            text-align: center;
+            color: #444;
+            margin-bottom: 0.625rem;
+        }
+        .button-row {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
         .btn {
-            display: block;
-            margin: 0.5rem 0;
+            flex: 1;                /* So each button in a row is equally wide */
             padding: 0.5rem;
-            width: 100%;
             font-size: 0.875rem;
             border: none;
             border-radius: 0.25rem;
@@ -30,12 +39,6 @@
         }
         .btn:hover {
             background-color: oklch(0.541 0.281 293.009);
-        }
-        .description {
-            font-size: 0.75rem;
-            text-align: center;
-            color: #444;
-            margin-bottom: 0.625rem;
         }
         .footer {
             margin-top: 0.75rem;
@@ -49,12 +52,21 @@
 <h2>Link Formatter</h2>
 <div class="description">Copy the link to the current page in the following format:</div>
 
-<button id="btnJira" class="btn">Jira</button>
-<button id="btnSlack" class="btn">Slack</button>
+<!-- Row for Jira buttons -->
+<div class="button-row">
+    <button id="btnJira" class="btn">Jira</button>
+    <button id="btnJiraShort" class="btn">Jira Short</button>
+</div>
+
+<!-- Row for Slack buttons -->
+<div class="button-row">
+    <button id="btnSlack" class="btn">Slack</button>
+    <button id="btnSlackShort" class="btn">Slack Short</button>
+</div>
 
 <div class="footer">
     Author:
-    <a href="mailto: s.chekurin@uzum.com">s.chekurin@uzum.com</a>
+    <a href="mailto:s.chekurin@uzum.com">s.chekurin@uzum.com</a>
 </div>
 
 <script src="popup.js"></script>

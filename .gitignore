@@ -1,0 +1,8 @@
+.DS_Store
+
+# Chrome Extension packing
+*.crx
+*.pem
+
+# IDE
+.idea

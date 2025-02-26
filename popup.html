@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Link Formatter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0.75rem;
+            padding: 0;
+            width: 14.375rem;
+            position: relative;
+        }
+        h2 {
+            margin: 0 0 0.625rem;
+            font-size: 1rem;
+            text-align: center;
+        }
+        .btn {
+            display: block;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            width: 100%;
+            font-size: 0.875rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            background-color: oklch(0.606 0.25 292.717);
+            color: #fff;
+        }
+        .btn:hover {
+            background-color: oklch(0.541 0.281 293.009);
+        }
+        .description {
+            font-size: 0.75rem;
+            text-align: center;
+            color: #444;
+            margin-bottom: 0.625rem;
+        }
+        .footer {
+            margin-top: 0.75rem;
+            text-align: center;
+            font-size: 0.6875rem;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+<h2>Link Formatter</h2>
+<div class="description">Скопировать ссылку на текущую страницу в формате:</div>
+
+<button id="btnJira" class="btn">Jira</button>
+<button id="btnSlack" class="btn">Slack</button>
+
+<div class="footer">
+    При обнаружении ошибок:
+    <a href="mailto: s.chekurin@uzum.com">s.chekurin@uzum.com</a>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

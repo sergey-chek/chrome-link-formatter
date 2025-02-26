@@ -1,7 +1,7 @@
 {
-  "name": "Link Formatter (Jira / Confluence / Slack)",
+  "name": "Link Formatter (Jira / Slack)",
   "version": "1.0",
-  "description": "Расширение для копирования ссылок в форматах Jira и Slack",
+  "description": "An extension for copying links in Jira and Slack formats",
   "manifest_version": 3,
   "permissions": [
     "activeTab",

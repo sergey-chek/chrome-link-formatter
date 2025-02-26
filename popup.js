@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentTitle = '';
     let currentUrl = '';
 
-    // Получаем активную вкладку
+    // Get the active tab
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         const activeTab = tabs[0];
         currentTitle = activeTab.title || '';
         currentUrl = activeTab.url || '';
     });
 
-    // Обработчики кнопок
+    // Button handlers
     btnJira.addEventListener('click', function () {
         const safeTitle = sanitizeTitleForJira(currentTitle);
         const jiraLink = `[${safeTitle}|${currentUrl}]`;
@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     btnSlack.addEventListener('click', function () {
-        // Тот же Markdown-формат, что и Confluence
         const safeTitle = sanitizeTitleForSlack(currentTitle);
         const slackLink = `[${safeTitle}](${currentUrl})`;
         copyToClipboard(slackLink, btnSlack);
@@ -31,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         navigator.clipboard.writeText(text).then(() => {
             showCopiedOnButton(button);
         }).catch(err => {
-            console.error('Ошибка копирования:', err);
+            console.error('Copy error:', err);
         });
     }
 
@@ -41,17 +40,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const originalBg = getComputedStyle(button).backgroundColor;
 
         // Меняем текст и фон
-        button.textContent = 'Скопировано!';
+        button.textContent = 'Copied!';
         button.style.backgroundColor = 'oklch(0.648 0.2 131.684)';
 
         setTimeout(() => {
-            // Восстанавливаем исходные значения
+            // Restoring original values
             button.textContent = originalText;
             button.style.backgroundColor = originalBg;
         }, 1000);
     }
 
-    // Функции очистки "опасных" символов
+    // Functions for sanitizing "dangerous" characters
     function sanitizeTitleForJira(title) {
         return title
             .replace(/[{}]/g, '')

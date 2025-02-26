@@ -1,6 +1,6 @@
 # Chrome Link Formatter
 
-A lightweight Chrome extension that copies the current page’s title and URL in **Jira** or **Slack-friendly** markup. It automatically sanitizes special characters so your links don’t break the target format.
+A lightweight Chrome extension that copies the current page’s title and URL in **Jira** or **Slack-friendly** markup. It automatically sanitizes special characters so your links don’t break the target format.  
 
 ![Chrome Link Formatter UI](resources/ui.png)
 
@@ -9,6 +9,7 @@ A lightweight Chrome extension that copies the current page’s title and URL in
 - **One-click** copy of the current page’s title and URL.
 - **Jira** format: `[Title|URL]`
 - **Slack** format: `[Title](URL)`
+- **Jira Short** / **Slack Short**: Automatically truncate the title
 - **Auto-sanitization** of special characters (e.g. braces, brackets, pipes).
 
 ## Installation
@@ -26,7 +27,9 @@ The extension should now appear in your toolbar. Pin it for quick access.
 2. Click the **Chrome Link Formatter** icon.
 3. Choose the format you need:
    - **Jira** → copies `[Title|URL]`
-   - **Slack** → also `[Title](URL)`
+   - **Jira Short** → copies `[ShortTitle|URL]` (truncated to 35 chars)
+   - **Slack** → copies `[Title](URL)`
+   - **Slack Short** → copies `[ShortTitle](URL)` (truncated to 35 chars)
 4. Paste anywhere you want to reference the link!
 
 ## Contributing

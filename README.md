@@ -40,4 +40,7 @@ The extension should now appear in your toolbar. Pin it for quick access.
 4. Push to the branch (`git push origin feature/my-feature`).
 5. Open a **Pull Request**.
 
+## Support / Contact
+schek.it@gmail.com
+
 Feel free to use this project as you see fit. Contributions are welcome!

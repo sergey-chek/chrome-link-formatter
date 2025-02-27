@@ -15,11 +15,12 @@
             margin: 0 0 0.625rem;
             font-size: 1rem;
             text-align: center;
+            color: #555;
         }
         .description {
             font-size: 0.75rem;
             text-align: center;
-            color: #444;
+            color: #555;
             margin-bottom: 0.625rem;
         }
         .button-row {
@@ -28,7 +29,7 @@
             margin-bottom: 0.5rem;
         }
         .btn {
-            flex: 1;                /* So each button in a row is equally wide */
+            flex: 1;
             padding: 0.5rem;
             font-size: 0.875rem;
             border: none;
@@ -46,8 +47,11 @@
             font-size: 0.6875rem;
             color: #999;
         }
-        .mail {
+        .footer a {
             color: #999;
+        }
+        .footer a:hover {
+            color: #666;
         }
     </style>
 </head>
@@ -68,9 +72,7 @@
 </div>
 
 <div class="footer">
-    Author:
-    <a href="mailto:s.chekurin@uzum.com" class="mail">s.chekurin@uzum.com</a>
-    (ver: 1.1)
+    <a href="https://github.com/sergey-chek/chrome-link-formatter/issues" target="_blank">Feedback</a> (ver: 1.1)
 </div>
 
 <script src="popup.js"></script>

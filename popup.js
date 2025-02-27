@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     btnJiraShort.addEventListener('click', function () {
         // Sanitize the original title
         let safeTitle = sanitizeTitleForJira(currentTitle);
-        // Truncate to 20 chars (with "...")
+        // Truncate (with "...")
         safeTitle = shortifyTitle(safeTitle, 35);
         // Build the link
         const jiraLink = `[${safeTitle}|${currentUrl}]`;
@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // Copy and feedback
-
     function copyToClipboard(text, button) {
         navigator.clipboard.writeText(text).then(() => {
             showCopiedOnButton(button);
@@ -77,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 1000);
     }
 
-    // shortify title
+    // Shortify title
     function shortifyTitle(title, maxLen) {
         if (title.length > maxLen) {
             return title.slice(0, maxLen) + '...';
@@ -85,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return title;
     }
 
-    // Functions for sanitizing "dangerous" characters
+    // Functions for title sanitizing
     function sanitizeTitleForJira(title) {
         return title
             .replace(/[{}]/g, '')
